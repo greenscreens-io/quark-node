@@ -1,0 +1,15 @@
+{
+    "name": "quark-engine",
+    "version": "1.0.0",
+    "productName": "quark-engine",
+    "description": "Quark Engine Client lib for NodeJS",
+    "author": "Green Screens Ltd. <info@greenscreens.io>",
+    "email": "info@greenscreens.io",
+    "url": "http://www.greenscreens.io/quark",
+    "main": "index.js",
+    "dependencies": {
+        "wasm-flate": "*",
+        "node-fetch": "*",
+        "ws": "*"
+    }
+}
