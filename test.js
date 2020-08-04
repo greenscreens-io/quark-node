@@ -1,7 +1,7 @@
 /*
  * Copyright (C) 2015, 2020  Green Screens Ltd.
  */
- const Engine = require('./lib/engine');
+const Engine = require('./lib/engine');
 
 const api = "http://localhost:8080/io.greenscreens.quark/api";
 const svc = "ws://localhost:8080/io.greenscreens.quark/socket";
