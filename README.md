@@ -12,7 +12,13 @@ Calls are the same as for browser API's, engine will dynamically generate API ca
 Upon initialization with
 
 ```
-await Engine.init({api:api, service: api});
+const QuarkEngine = require('./lib/engine');
+
+const channelWeb = "http://localhost:8080/io.greenscreens.quark/api";
+const channelWS = "ws://localhost:8080/io.greenscreens.quark/socket";
+
+let Engine = new QuarkEngine({api:channelWeb, service: channelWS});
+await Engine.init();
 ```
 
 Use the following to get generated API, or attach it to the global object.
@@ -22,7 +28,7 @@ const { io } = Engine.api();
 global.io = io;
 ```
 
-Multi-service is supported also. Simply initialize another Engine instance. 
+Multi-service is supported also. Simply initialize another Engine instance.
 
 ### Install
 
