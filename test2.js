@@ -6,10 +6,14 @@ const cfg = {"api":[{"namespace":"io.greenscreens","action":"IFS","paths":["/soc
 Generator = require('./lib/generator');
 Security = require('./lib/security');
 
-// Test importing server certificate
-Security.init(cfg);
+Generator = new Generator();
+Security = new Security();
 
 // Test generating remote API
 let o = Generator.build(cfg);
 console.log(o);
 console.log(Generator.api);
+
+
+// Test importing server certificate
+Security.init(cfg);
