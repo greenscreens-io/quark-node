@@ -42,5 +42,10 @@ async function test2() {
 	Engine.stop();
 }
 
-test1();
-test2();
+async function test() {
+
+	await test1();
+	await test2();
+}
+
+test()

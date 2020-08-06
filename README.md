@@ -1,6 +1,8 @@
 
 # [Quark Engine for NodeJS](https://www.greenscreens.io/quark).
 
+**TODO**: Add multi-service support. Currently works with only one API service.
+
 Visit project web page [here](https://www.greenscreens.io/quark).
 
 This is client library for NodeJS enabling communication with Green Screens Quark Engine for Java.
@@ -15,7 +17,8 @@ Upon initialization with
 await Engine.init({api:api, service: api});
 ```
 
-Use the following to get generated API, or attach it to the global object
+Use the following to get generated API, or attach it to the global object.
+**io** is first part of namespace group defined in Java server side controllers.
 ```
 const { io } = Engine.api();
 global.io = io;
