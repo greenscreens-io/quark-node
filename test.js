@@ -1,18 +1,26 @@
 /*
  * Copyright (C) 2015, 2020  Green Screens Ltd.
  */
-const Engine = require('./lib/engine');
+const QuarkEngine = require('./lib/engine');
 
-const api = "http://localhost:8080/io.greenscreens.quark/api";
-const svc = "ws://localhost:8080/io.greenscreens.quark/socket";
+const channelWeb = "http://localhost:8080/io.greenscreens.quark/api";
+const channelWS = "ws://localhost:8080/io.greenscreens.quark/socket";
 
 /*
  * Test calls to Quark Engine through HTTP/HTTPS
  */
 async function test1() {
 
-	await Engine.init({api:api, service: api});
-	const { io } = Engine.api();
+	// in real life, initialize only once per service api through whole application
+	let Engine = new QuarkEngine({api:channelWeb, service: channelWeb});
+
+	// initialze engine
+	await Engine.init();
+
+	// get genrated API as local scoped variable
+	// or attach it to global scope for all other modules
+	// global.io = Engine.api.io
+	const { io } = Engine.api;
 
 	console.log(io);
 
@@ -21,6 +29,8 @@ async function test1() {
 
 	o = await io.greenscreens.Demo.listUsers();
 	console.log(o);
+
+	Engine.stop();
 }
 
 /*
@@ -28,8 +38,16 @@ async function test1() {
  */
 async function test2() {
 
-	await Engine.init({api: svc, service: svc});
-	const { io } = Engine.api();
+	// in real life, initialize only once per service api through whole application
+	let Engine = new QuarkEngine({api: channelWS, service: channelWS});
+
+	// initialze engine
+	await Engine.init();
+
+	// get genrated API as local scoped variable
+	// or attach it to global scope for all other modules
+	// global.io = Engine.api.io
+	const { io } = Engine.api;
 
 	console.log(io);
 
@@ -39,6 +57,7 @@ async function test2() {
 	o = await io.greenscreens.Demo.listUsers();
 	console.log(o);
 
+	// if used globally, close not needed
 	Engine.stop();
 }
 
