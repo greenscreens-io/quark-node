@@ -14,6 +14,5 @@ let o = Generator.build(cfg);
 console.log(o);
 console.log(Generator.api);
 
-
 // Test importing server certificate
 Security.init(cfg);

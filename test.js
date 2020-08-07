@@ -30,6 +30,7 @@ async function test1() {
 	o = await io.greenscreens.Demo.listUsers();
 	console.log(o);
 
+	// if used globally, stop not needed
 	Engine.stop();
 }
 
@@ -41,7 +42,7 @@ async function test2() {
 	// in real life, initialize only once per service api through whole application
 	let Engine = new QuarkEngine({api: channelWS, service: channelWS});
 
-	// initialze engine
+	// initialize engine
 	await Engine.init();
 
 	// get genrated API as local scoped variable
@@ -57,7 +58,7 @@ async function test2() {
 	o = await io.greenscreens.Demo.listUsers();
 	console.log(o);
 
-	// if used globally, close not needed
+	// if used globally, stop not needed
 	Engine.stop();
 }
 
