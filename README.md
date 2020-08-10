@@ -32,7 +32,10 @@ Multi-service is supported also. Simply initialize another Engine instance.
 
 ### Install
 
-1. Download or clone repository
+1. Download or clone repository or install it from npm with
+```
+npm i quark-engine
+```
 2. execute **npm install** to install dependencies
 3. Start Java demo web app  from quark-engine repo
 4. execute node test.js
