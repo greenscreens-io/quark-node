@@ -17,7 +17,7 @@ async function test1() {
 	// initialze engine
 	await Engine.init();
 
-	// get genrated API as local scoped variable
+	// get generated API as local scoped variable
 	// or attach it to global scope for all other modules
 	// global.io = Engine.api.io
 	const { io } = Engine.api;

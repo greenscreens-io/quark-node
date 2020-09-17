@@ -8,7 +8,6 @@
     "url": "http://www.greenscreens.io/quark",
     "main": "index.js",
     "dependencies": {
-        "wasm-flate": "*",
         "node-fetch": "*",
         "ws": "*"
     }
