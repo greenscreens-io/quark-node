@@ -1,7 +1,7 @@
 
-# [Quark Engine for NodeJS](https://www.greenscreens.io/quark).
+# [Quark Engine for NodeJS](https://quark.greenscreens.ltd/).
 
-Visit project web page [here](https://www.greenscreens.io/quark).
+Visit project web page [here](https://quark.greenscreens.ltd/).
 
 This is client library for NodeJS enabling communication with Green Screens Quark Engine for Java.
 
@@ -44,4 +44,4 @@ npm i quark-engine
 **NOTE:** WebCrypto wrapper for NodeJs copied from link below as module is not in npm. Lib is used to wrap NodeJS crypto API into WebCrypto API for compatibility purposes.
 https://github.com/nodejs/webcrypto
 
-&copy; Green Screens Ltd. 2016 - 2021
+&copy; Green Screens Ltd. 2016 - 2022
