@@ -7,7 +7,7 @@ This is client library for NodeJS enabling communication with Green Screens Quar
 
 Use it to call remote Java services based on Quark Engine methodology.
 
-Calls are the same as for browser API's, engine will dynamically generate API calls to be used across NodeJS app.
+Calls are the same as for thwebrowser API's, engine will dynamically generate API calls to be used across NodeJS app.
 
 Upon initialization with
 
@@ -17,7 +17,7 @@ const QuarkEngine = require('./lib/engine');
 const channelWeb = "http://localhost:8080/io.greenscreens.quark/api";
 const channelWS = "ws://localhost:8080/io.greenscreens.quark/socket";
 
-let Engine = new QuarkEngine({api:channelWeb, service: channelWS});
+const Engine = new QuarkEngine({api:channelWeb, service: channelWS});
 await Engine.init();
 ```
 

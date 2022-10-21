@@ -1,6 +1,6 @@
 {
     "name": "quark-engine",
-    "version": "2.5.0",
+    "version": "3.0.0",
     "productName": "quark-engine",
     "description": "Quark Engine Client lib for NodeJS",
     "author": "Green Screens Ltd. <info@greenscreens.io>",

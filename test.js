@@ -12,7 +12,7 @@ const channelWS = "ws://localhost:8080/io.greenscreens.quark/socket";
 async function test1() {
 
 	// in real life, initialize only once per service api through whole application
-	let Engine = await QuarkEngine.init({api:channelWeb, service: channelWeb});
+	const Engine = await QuarkEngine.init({api:channelWeb, service: channelWeb});
 
 	// get generated API as local scoped variable
 	// or attach it to global scope for all other modules
@@ -37,7 +37,7 @@ async function test1() {
 async function test2() {
 
 	// in real life, initialize only once per service api through whole application
-	let Engine = await QuarkEngine.init({api: channelWS, service: channelWS});
+	const Engine = await QuarkEngine.init({api: channelWS, service: channelWS});
 
 	// get genrated API as local scoped variable
 	// or attach it to global scope for all other modules
