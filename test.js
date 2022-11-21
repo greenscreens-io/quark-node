@@ -1,10 +1,15 @@
 /*
  * Copyright (C) 2015, 2020  Green Screens Ltd.
  */
-const QuarkEngine = require('./lib/engine');
+const QuarkEngine = require('./lib/Engine');
 
+/*
 const channelWeb = "http://localhost:8080/io.greenscreens.quark/api";
 const channelWS = "ws://localhost:8080/io.greenscreens.quark/socket";
+*/
+
+const channelWeb = "http://localhost:8080/demo/api";
+const channelWS = "ws://localhost:8080/demo/socket";
 
 /*
  * Test calls to Quark Engine through HTTP/HTTPS
@@ -62,4 +67,4 @@ async function test() {
 	await test2();
 }
 
-test()
+test().then(() => {});
