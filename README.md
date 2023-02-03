@@ -44,4 +44,4 @@ npm i quark-engine
 **NOTE:** WebCrypto wrapper for NodeJs copied from link below as module is not in npm. Lib is used to wrap NodeJS crypto API into WebCrypto API for compatibility purposes.
 https://github.com/nodejs/webcrypto
 
-&copy; Green Screens Ltd. 2016 - 2022
+&copy; Green Screens Ltd. 2016 - 2023
