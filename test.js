@@ -63,7 +63,7 @@ async function test2() {
 
 async function test() {
 
-	// await test1();
+	await test1();
 	await test2();
 }
 
