@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2015, 2020  Green Screens Ltd.
+ * Copyright (C) 2015, 2023 Green Screens Ltd.
  */
 const QuarkEngine = require('./lib/Engine');
 
@@ -42,7 +42,7 @@ async function test1() {
 async function test2() {
 
 	// in real life, initialize only once per service api through whole application
-	const Engine = await QuarkEngine.init({api: channelWS, service: channelWS});
+	const Engine = await QuarkEngine.init({api: channelWeb, service: channelWS});
 
 	// get genrated API as local scoped variable
 	// or attach it to global scope for all other modules
@@ -63,7 +63,7 @@ async function test2() {
 
 async function test() {
 
-	await test1();
+	// await test1();
 	await test2();
 }
 
