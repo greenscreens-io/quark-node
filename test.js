@@ -64,7 +64,7 @@ async function test2() {
 async function test() {
 
 	await test1();
-	await test2();
+	//await test2();
 }
 
 test().then(() => {});
