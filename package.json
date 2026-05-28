@@ -10,6 +10,6 @@
     "dependencies": {
         "node-fetch": "^3.0.0",
         "quark-engine": "file:",
-        "ws": "8.18.0"
+        "ws": "8.20.1"
     }
 }
